@@ -16,12 +16,15 @@
 
 <body>
 <?php 
+	if (!isset($_SESSION)) session_start();
 	$failinimi = 'visiite.txt';
-
-	if (!isset($_SESSION)) {
-		session_start();
-		$tekst = date("h:i:sa");
-		file_put_contents($failinimi, $tekst . PHP_EOL, FILE_APPEND);	
+	
+	if (!isset($_SESSION['userip'])) {
+		$ip = $_SERVER['REMOTE_ADDR'];
+		$tekst = date("h:i:s");
+		
+		file_put_contents($failinimi, $tekst . PHP_EOL, FILE_APPEND);
+		$_SESSION['userip'] = $ip;
 	}
 
 ?>
@@ -31,18 +34,24 @@
 
 <?php
 	if (file_exists($failinimi)) {
+		/*
 		$failisisu = file_get_contents($failinimi);
+		*/
+		$failMassiiviks = file($failinimi);
 	} else {
 		echo '<h1>Faili ei leitud</h1>';
 	}
 	
-	$failMassiiviks = file($failinimi);
+	
 	$massiiviSuurus = count($failMassiiviks);
 	echo $massiiviSuurus;
 	echo '<p>Viimane külastus</p>';
 	
 	echo $failMassiiviks[$massiiviSuurus-1];
+
 ?>
+
+<p><a href="logout.php">Väljalogimine</a></p>
 
 </body>
 </html>
