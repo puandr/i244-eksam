@@ -21,5 +21,12 @@
     <input type="submit" value="lae pilt" />
 </form>
 
+<p>
+<?php
+	$fi = new FilesystemIterator("images", FilesystemIterator::SKIP_DOTS);
+	printf("There were %d Files", iterator_count($fi));
+?>
+</p>
+
 </body>
 </html>

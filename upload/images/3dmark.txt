@@ -1,0 +1,24 @@
+3DMark Score
+P5483 3DMarks		P70173 3DMarks
+CPU Score
+25290		74975
+Graphics Score
+4348		68706
+Result name	 Untitled		
+EVGA SR-2 | EVGA 480GTX Quad SLI
+Date	Oct 20, 2010 13:34 UTC		Oct 11, 2010 20:11 UTC
+Pro user	No	No	 Yes
+OS	Windows 7		Windows 7 Beta
+CPU	  Intel Core i5 Processor I5-650		  Intel(R) Xeon(R) CPU X5680 @ 3.33GHz
+CPU Speed	3192 MHz	 MHz	5486 MHz
+GPU	NVIDIA GeForce 9600 GT		NVIDIA GeForce GTX 480
+Memory	3072 MB	 MB	2688 MB
+Case	 Not specified		
+Not specified
+CPU Cooler	 Not specified	Cooler Master V10	
+Not specified
+GPU Cooler	 Not specified		
+Not specified
+Case cooler	 Not specified		
+Not specified
+PSU	 Not specified
